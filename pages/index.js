@@ -6,7 +6,7 @@ import NewsList from '../components/landing/news-list/NewsList';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Blog</title>
       </Head>
@@ -31,6 +31,6 @@ export default function Home() {
       </main>
 
       <footer></footer>
-    </div>
+    </>
   );
 }

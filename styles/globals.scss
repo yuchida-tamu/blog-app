@@ -56,51 +56,6 @@ ul {
       flex: 60%;
       height: 100%;
       padding: 0;
-      .blog-list__item {
-        width: 95%;
-        height: 128px;
-        display: flex;
-        justify-content: space-between;
-        background-color: $white;
-        margin-bottom: 16px;
-        @include shadow;
-
-        .blog-list__item__thumbnail-container {
-          position: relative;
-          width: 212px;
-          height: 100%;
-        }
-
-        .blog-list__item__content-container {
-          height: 100%;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-self: flex-end;
-          h3 {
-            display: inline-block;
-            font-size: $heading-xsmall;
-            width: 560px;
-            color: $black;
-            text-align: center;
-            &::after {
-              content: '';
-              display: block;
-              width: 80%;
-              height: 3px;
-              margin: $spacing-xsmall auto 0;
-              background-color: $secondary-dark;
-            }
-          }
-          p {
-            width: 560px;
-            display: inline-block;
-            color: $primary-dark;
-            margin: 0;
-          }
-        }
-      }
     }
 
     .news-container {
@@ -154,6 +109,56 @@ ul {
           opacity: 1;
         }
       }
+    }
+
+    .blog-list__container {
+      width: 95%;
+    }
+  }
+}
+
+.blog-list__item {
+  width: 95%;
+  height: 128px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $white;
+  margin-bottom: 16px;
+  @include shadow;
+
+  .blog-list__item__thumbnail-container {
+    position: relative;
+    width: 212px;
+    height: 100%;
+  }
+
+  .blog-list__item__content-container {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: flex-end;
+    h3 {
+      display: inline-block;
+      font-size: $heading-xsmall;
+      width: 560px;
+      color: $black;
+      text-align: center;
+      &::after {
+        content: '';
+        display: block;
+        width: 80%;
+        height: 3px;
+        margin: $spacing-xsmall auto 0;
+        background-color: $secondary-dark;
+      }
+    }
+    p {
+      width: 560px;
+      display: inline-block;
+      color: $primary-dark;
+      margin: 0;
     }
   }
 }
