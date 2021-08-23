@@ -4,8 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Playfair Display', serif;
   background-color: $primary;
   color: $white;
 }
@@ -42,6 +41,7 @@ ul {
     align-items: center;
 
     .main-banner-container {
+      position: relative;
       width: 100%;
       height: 320px;
       background-color: $white;
@@ -59,9 +59,47 @@ ul {
       .blog-list__item {
         width: 95%;
         height: 128px;
+        display: flex;
+        justify-content: space-between;
         background-color: $white;
         margin-bottom: 16px;
         @include shadow;
+
+        .blog-list__item__thumbnail-container {
+          position: relative;
+          width: 212px;
+          height: 100%;
+        }
+
+        .blog-list__item__content-container {
+          height: 100%;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-self: flex-end;
+          h3 {
+            display: inline-block;
+            font-size: $heading-xsmall;
+            width: 560px;
+            color: $black;
+            text-align: center;
+            &::after {
+              content: '';
+              display: block;
+              width: 80%;
+              height: 3px;
+              margin: $spacing-xsmall auto 0;
+              background-color: $secondary-dark;
+            }
+          }
+          p {
+            width: 560px;
+            display: inline-block;
+            color: $primary-dark;
+            margin: 0;
+          }
+        }
       }
     }
 
@@ -75,6 +113,8 @@ ul {
       h2 {
         color: $white;
         text-align: center;
+        font-size: $heading-small;
+        letter-spacing: $font-space-large;
       }
 
       .news-list {
@@ -82,7 +122,36 @@ ul {
         padding: 0;
         margin: 0;
         .news-list__item {
-          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          margin-bottom: $spacing-medium;
+          font-size: $paragraph-large;
+          cursor: pointer;
+
+          .icon {
+            margin-right: $spacing-small;
+          }
+
+          .heading {
+            letter-spacing: $font-space-medium;
+          }
+          .content {
+            letter-spacing: $font-space-small;
+          }
+        }
+      }
+
+      .btn {
+        width: 128px;
+        height: 36px;
+        text-align: center;
+        font-size: $paragraph-large;
+        opacity: 0.75;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 1;
         }
       }
     }
