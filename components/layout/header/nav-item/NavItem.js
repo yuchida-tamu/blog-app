@@ -5,7 +5,7 @@ const NavItem = ({ path, label, router }) => {
   return (
     <li className={router?.pathname === path ? 'nav-item action' : 'nav-item'}>
       <Link href={path}>
-        <a>{label}</a>
+        <a className="link">{label}</a>
       </Link>
     </li>
   );
