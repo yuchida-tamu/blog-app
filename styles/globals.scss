@@ -26,6 +26,40 @@ ul {
   width: 100%;
 }
 
+.header {
+  display: flex;
+  width: 100vw;
+  margin: 0;
+  .header__navbar {
+    width: 100%;
+    margin: 0;
+    .nav-list {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      margin: 0;
+      .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 192px;
+        height: 5vh;
+        color: $white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $gray-light;
+        }
+      }
+      .action {
+        background-color: $gray-light;
+      }
+    }
+  }
+}
+
+// HOME
+
 .main-container {
   width: 100vw;
   height: 90vh;
@@ -35,7 +69,7 @@ ul {
 
   .top-section {
     width: 85%;
-    height: 50%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +83,7 @@ ul {
   }
   .bottom-section {
     width: 85%;
-    height: 50%;
+    height: 60%;
     display: flex;
 
     .recent-blog-list {
@@ -84,10 +118,11 @@ ul {
           cursor: pointer;
 
           .icon {
-            margin-right: $spacing-small;
+            margin-right: $spacing-medium;
           }
 
           .heading {
+            margin-left: $spacing-xsmall;
             letter-spacing: $font-space-medium;
           }
           .content {
@@ -162,3 +197,5 @@ ul {
     }
   }
 }
+
+// Blog
